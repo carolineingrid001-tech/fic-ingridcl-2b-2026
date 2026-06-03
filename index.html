@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sistema de votação</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="caixa">
+        <h2>Sistema de Votação</h2>
+        <input type="number" id="idade" placeholder="Digite sua idade: ">
+           <button onclick="digitarIdade()">verificar idade</button>
+
+
+        <input type="number" id="voto" placeholder="digite o numero do voto">
+        <button onclick="verificarVoto()">Verificar Voto</button>
+
+
+        <div id="resultado"></div>
+    </div>
+    
+    <script>
+        function digitarIdade() {
+            let voto = Number(document.getElementById("voto").value);
+            let resultado = document.getElementById("resultado");
+
+            if (idade < 16) {
+                resultado.innerHTML = "Não pode votar!";
+            } else if (idade < 18 || idade > 70) {
+                resultado.innerHTML = "Voto opcional!";
+            } else {
+                resultado.innerHTML = "Voto obrigatório!";
+            }
+        }
+
+        function verificarVoto() {
+            let idade = Number(document.getElementById("idade").value);
+            let resultado = document.getElementById("resultado");
+            let voto = Number(document.getElementById("voto").value);
+
+        if (idade <16) {
+            resultado.innerHTML = "Não pode votar!";
+            }
+            else if (idade < 18 || idade > 70) {
+            resultado.innerHTML = "Voto opcional!";
+            }
+            else {
+            resultado.innerHTML = "Voto obrigatório!";
+            }
+            
+            
+                while(voto !=80) {
+                    resultado.innerHTML = "Voto inválido! Digite novamente: ";
+                    return;
+                
+             }
+                resultado.innerHTML = "Voto registrado com sucesso!";
+                }
+        
+    </script>
+</body> 
+</html>
