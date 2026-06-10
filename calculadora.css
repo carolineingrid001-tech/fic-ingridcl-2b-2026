@@ -13,7 +13,7 @@ body {
     padding: 90px 30px 30px;
     border-radius: 30px;
     border: 4px solid #0d5aff;
-    box-shadow: 0 0 10px rgba(52, 146, 235, 0.945);
+    box-shadow: 0 10px 30px rgb(6, 47, 182);
     text-align: center;
 }
 
